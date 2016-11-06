@@ -6,6 +6,6 @@ ambari:
     versions:
       - 2.4.1.0
   agent:
-    start_service: True
+    start_service: False
   server:
-    start_service: True
+    start_service: False
