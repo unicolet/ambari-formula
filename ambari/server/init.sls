@@ -1,9 +1,6 @@
 {% from 'ambari/map.jinja' import ambari with context %}
 {% from 'ambari/map.jinja' import version_mapping with context %}
 
-# Sets which user is running ambari-server
-{% set ambari_user = ambari.server.ambari_server.user %}
-
 include:
   - ambari.repo
   {% if ambari.server.start_service %}

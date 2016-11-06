@@ -5,3 +5,7 @@ ambari:
   repo:
     versions:
       - 2.4.1.0
+  agent:
+    start_service: True
+  server:
+    start_service: True
