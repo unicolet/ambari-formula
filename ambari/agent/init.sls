@@ -23,14 +23,3 @@ ambari-agent-{{ambari.version}}-pkg:
     - version: {{ version_mapping.get(ambari.version) }}
 {% endif %}
 
-ambari-agent-{{ambari.version}}-config:
-  file.managed:
-    - name: /etc/ambari-agent/conf/ambari-agent.ini
-    - source: salt://ambari/agent/files/ambari-agent.ini
-    - template: jinja
-    - mode: 0640
-    - user: root
-    - group: root
-    - makedirs: True
-    - require_in:
-      - pkg: ambari-agent-{{ambari.version}}-pkg
